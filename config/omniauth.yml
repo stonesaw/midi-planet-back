@@ -1,0 +1,10 @@
+production: &production
+  google:
+    key: <%= ENV['GOOGLE_KEY'] %>
+    secret: <%= ENV['GOOGLE_SECRET'] %>
+
+development: &development
+  <<: *production
+
+test:
+  <<: *development
